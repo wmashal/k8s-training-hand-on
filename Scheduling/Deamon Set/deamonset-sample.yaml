@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: daemon-sample
+  labels:
+    app: nginx-daemon
+  annotations:
+    buildversion: 1.32
+spec:
+  selector: 
+    matchLabels:
+      app: nginx
+      tier: fronend
+  template:
+      metadata:
+        name: nginx
+        labels:
+          app: nginx
+          tier: fronend
+      spec:
+        containers:
+          - name: nginx
+            image: nginx

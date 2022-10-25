@@ -1,0 +1,7 @@
+kubectl create namespace test
+
+kubectl apply -f test.yaml
+
+kubectl get pods --namespace=test
+
+kubectl get pods --all-namespaces

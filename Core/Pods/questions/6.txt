@@ -1,0 +1,7 @@
+create the webapp pod using the yaml then check how many containers exist?
+and what the images names ?
+
+What is the state of the container agentx in the pod webapp? Wait for it to finish the ContainerCreating state
+
+Why do you think the container agentx in pod webapp is in error?
+Try to figure it out from the events section of the pod.

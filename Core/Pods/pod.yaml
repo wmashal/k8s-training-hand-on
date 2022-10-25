@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ngnix
+  labels:
+    app: ngnix
+    tier: fronend
+spec:
+  containers:
+    - name: ngnix
+      image: ngnix
+  nodeName: node2
+    # - name: busybox
+    #   image: busybox

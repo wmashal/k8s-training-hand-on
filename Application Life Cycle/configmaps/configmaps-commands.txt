@@ -1,0 +1,15 @@
+Kubectl create configmap <config-name> --from-literal=<key>=<value>
+Kubectl create configmap <config-name> --from-file=<file path>
+
+From literal Examples:
+Kubectl create configmap configmap --from-literal=APP_COLOR=pink
+Kubectl create configmap configmap --from-literal=APP_COLOR=pink --from-literal=APP_MOD=prod 
+
+Example from file
+Kubectl create configmap configmap --from-file=app_configs.properties
+
+
+View config maps
+
+kubectl get configmaps
+kubectl describe configmaps

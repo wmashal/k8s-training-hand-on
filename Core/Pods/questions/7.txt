@@ -1,0 +1,6 @@
+What does the READY column in the output of the kubectl get pods command indicate?
+
+Run the command kubectl get pods and inspect the header. (ready containers out of n containers)
+
+Delete the webapp Pod.
+Once deleted, wait for the pod to fully terminate.

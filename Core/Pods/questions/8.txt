@@ -1,0 +1,7 @@
+Create a new pod with the name redis and with the image redis123.
+
+Use a pod-definition YAML file. And yes the image name is wrong!
+
+Now change the image on this pod to redis.
+
+Once done, the pod should be in a running state.

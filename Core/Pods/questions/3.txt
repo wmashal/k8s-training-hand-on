@@ -1,0 +1,9 @@
+what the command I should write to list the pods like the following?
+
+NAME            READY   STATUS    RESTARTS   AGE
+nginx           1/1     Running   0          27s
+newpods-5lv5l   1/1     Running   0          18s
+newpods-bsfhx   1/1     Running   0          18s
+newpods-cklm9   1/1     Running   0          18s
+
+

@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replica-sample
+  labels:
+    app: nginx-replica
+  annotations:
+    buildversion: 1.32
+spec:
+  selector: 
+    matchLabels:
+      app: nginx
+      tier: fronend
+  replicas: 3
+  template:
+      metadata:
+        name: nginx
+        labels:
+          app: nginx
+          tier: fronend
+      spec:
+        containers:
+          - name: nginx
+            image: nginx

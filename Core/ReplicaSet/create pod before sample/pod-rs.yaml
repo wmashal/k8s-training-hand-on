@@ -1,0 +1,36 @@
+# While you can create bare Pods with no problems, 
+# it is strongly recommended to make sure that the bare Pods do not have 
+# labels which match the selector of one of your ReplicaSets. 
+# The reason for this is because a ReplicaSet is not limited to owning 
+# Pods specified by its template-- it can acquire other Pods in the manner specified in the previous sections.
+
+# If you create the Pods first:
+# And then create the ReplicaSet however:
+# You shall see that the ReplicaSet has acquired the Pods and has only created new ones according to its spec until the number of its new Pods and the original matches its desired count. As fetching the Pods:
+
+# kubectl get pods
+
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod1
+  labels:
+    tier: frontend
+spec:
+  containers:
+  - name: hello1
+    image: gcr.io/google-samples/hello-app:2.0
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod2
+  labels:
+    tier: frontend
+spec:
+  containers:
+  - name: hello2
+    image: gcr.io/google-samples/hello-app:1.0

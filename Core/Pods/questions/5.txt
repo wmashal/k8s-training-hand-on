@@ -1,0 +1,4 @@
+in your cluster list all pods and show on which nodes these pods placed ?
+
+Run the command kubectl describe pod <podname> and look at the node field.
+Alternatively run kubectl get pods -o wide and check for the node the pod is placed on.

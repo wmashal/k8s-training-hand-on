@@ -1,0 +1,22 @@
+
+To install the metrics server you can apply the deployment file form the repository 
+
+kubectl apply -f https://github.com/kubernetes-sigs/metricsserver/releases/latest/download/components.yaml
+
+Once deployed, give the metrics-server some time to collect and process data. Once processed, cluster performance can be viewed by running the command
+
+Kubectl top node
+
+
+kubectl apply -f https://k8s.io/examples/debug/counter-pod.yaml
+kubectl logs counter
+
+You can use 
+
+kubectl logs --previous 
+
+to retrieve logs from a previous instantiation of a container.
+
+If your pod has multiple containers, specify which container's logs you want to access
+
+kubectl logs counter -c count

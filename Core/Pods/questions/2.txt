@@ -1,0 +1,3 @@
+Create a new pod with the nginx image. then check the state of the pod
+
+How many pods are created now?

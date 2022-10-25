@@ -1,0 +1,1 @@
+write a command to show the image used to create the the nginx pod?

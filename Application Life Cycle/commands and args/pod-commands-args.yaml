@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: command-demo
+  labels:
+    purpose: demonstrate-command
+spec:
+  containers:
+  - name: command-demo-container
+    image: debian
+    command: ["printenv"]
+    args: ["HOSTNAME", "KUBERNETES_PORT"]
+  restartPolicy: OnFailure
+
+
+# kubectl apply -f pod-commands-args.yaml
+# kubectl get pods
+# To see the output of the command that ran in the container, view the logs from the Pod:
+# kubectl logs command-demo

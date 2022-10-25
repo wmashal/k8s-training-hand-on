@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: replica-sample-before
+  labels:
+    app: nginx
+    tier: fronend
+spec:
+  containers:
+    - name: nginx
+      image: nginx
