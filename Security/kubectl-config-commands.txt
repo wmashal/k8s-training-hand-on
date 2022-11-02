@@ -1,0 +1,13 @@
+# View
+kubectl config view
+
+
+# specify kubeconfig
+kubectl config view --kubeconfig=<name>
+
+# use context
+kubectl config use-context admin@production
+
+# help
+
+kubectl config -h

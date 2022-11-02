@@ -1,0 +1,10 @@
+1- if you create a simple pod
+note that we dont spicify any service account or secret 
+but when you descripe the pod details you can see a mounted volume 
+for example 
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-hn5km (ro)
+
+if u go inside the pod and see the content of the directory you will see a file called "token"
+
+view the content of the token file you will see the token this pod use to conatct the other components internally.

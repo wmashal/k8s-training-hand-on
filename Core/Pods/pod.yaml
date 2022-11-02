@@ -9,6 +9,6 @@ spec:
   containers:
     - name: ngnix
       image: ngnix
-  nodeName: node2
+  # nodeName: node2
     # - name: busybox
     #   image: busybox
